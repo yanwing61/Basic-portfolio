@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    font-family:'Source Code Pro', monospace;
+    color: #6F6F6F;
+}
+
+body {
+    margin:0;
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #009A9A;
+    
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* HEADER */
+#header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #9A3600;
+    padding: 8px 120px;
+}
+
+#menu-icon{
+    display: none;
+}
+
+.menu {
+    display:flex;
+    padding:0;
+    margin:0;
+    list-style:none;
+    gap:2em;
+}
+
+.menu a{
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.menu a:hover{
+    color: #0ABEBE;
+}
+
+/* MAIN */
+#about, #contact, #welcome, #projects{
+    padding: 75px 120px;
+}
+
+#about, #contact{
+    background-color: rgba(255,167,119,0.15);
+}
+
+.page-button{
+    background-color: #ffffff;
+    font-size: 1.25em;
+    color:#9A3600;
+    padding: 20px 30px;
+    border-radius: 25px;
+    border: 5px solid #9A3600;
+    align-self: center;
+}
+
+.page-button:hover{
+    border-color: #0ABEBE;
+}
+
+/* WELCOME */
+
+#welcome{
+    display: grid;
+    /* gap: 25px; */
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "welcome-text propic"
+    "welcome-button propic";
+}
+
+#welcome-button{
+    grid-area: welcome-button;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+#welcome-text{
+    grid-area: welcome-text;
+}
+
+#hello{
+    font-size: 2.25em;
+    font-weight: 500;
+}
+
+#propic img{
+    border-radius: 25px;
+    width: 100%;
+}
+
+#propic{
+    grid-area: propic;
+}
+
+#title{
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+.page-button img{
+    padding-right: 1em;
+}
+
+/* ABOUT */
+#about{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+#about-me p{
+    margin: 0;
+}
+
+#skills-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* PROJECTS */
+#project-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.project{
+    position: relative;
+    max-width: 300px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.project img{
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px 5px #00000015;
+    width: 100%;
+    height: auto;
+}
+
+.project:nth-child(4){
+    display: none;
+}
+
+.project-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    border-radius: 0 0 25px 25px;
+    background-color: #009A9A;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+
+#viewall{ 
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+#viewall p{
+    color: #9A3600;
+    margin-bottom: 0.5em;
+}
+
+#viewall p:hover{
+    color: #0ABEBE;
+}
+
+
+/* CONTACT */
+#contact h2{
+    padding-bottom: 0;
+}
+
+#contact p{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+label{
+    position: absolute;
+    left:-10000px;
+}
+
+input, textarea{
+    color: #000000;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    font-family:'Source Code Pro', monospace;
+    border: 0;
+    padding: 10px 30px;
+}
+
+#name, #email{
+    width: calc(100% - 60px);
+}
+
+#phone, #message{
+    width: calc(100% - 60px);
+}
+
+button{
+    font-family:'Source Code Pro', monospace;
+}
+
+#contact-form{
+    display: grid;
+    gap: 25px;
+    width:100%;
+    margin: 0 auto;
+    grid-template-areas: 
+    "name email phone"
+    "message message message"
+    "submit submit submit";
+}
+
+#contact-form .contact-form:first-child{
+    grid-area: name;
+}
+
+#contact-form .contact-form:nth-child(2){
+    grid-area: email;
+}
+
+#contact-form .contact-form:nth-child(3){
+    grid-area: phone;
+}
+
+#contact-form .contact-form:nth-child(4){
+    grid-area: message;
+}
+
+#contact-form .contact-form:nth-child(5){
+    grid-area: submit;
+    justify-self: end;
+}
+
+/* FOOTER */
+
+#footer{
+    font-weight: 300;
+    font-size: 0.875em;
+    background-color: #9A3600;
+    color: #FFFFFF;
+    padding: 0px 120px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer{
+    align-self: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:768px) {
+
+#header{
+    padding: 8px 70px;
+}
+
+#welcome, #about, #contact, #projects{
+    padding: 75px 70px;
+}
+
+#about{
+    flex-wrap: wrap;
+}
+
+/* T- WELCOME */
+#welcome{
+    gap: 20px;
+    grid-template-areas: 
+    "welcome-text propic"
+    "welcome-button welcome-button";
+}
+
+.page-button{
+    padding: 15px 20px;
+}
+
+#welcome-button{
+    gap: 20px;
+    justify-content: space-between;
+    
+}
+
+#propic img{
+    width: 100%;
+}
+
+#hello, #title{
+    font-size: 1.6em;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+/* T- ABOUT */
+#about-me{
+    flex-basis: 100%;
+}
+
+
+/* T- PROJECTS */
+.project:nth-child(4){
+    display: block;
+}
+    
+#project-img{   
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 0.5fr));
+    grid-template-rows: repeat(2, 0.5fr);
+}    
+
+/* T- CONTACT */
+#contact-form{
+    gap: 25px;
+    grid-template-areas: 
+    "name"
+    "email"
+    "phone"
+    "message"
+    "submit";
+    max-width: 425px;
+}
+
+#contact-form .contact-form:nth-child(5){
+    justify-self: center;
+}
+
+/* T- FOOTER */
+#footer{
+    padding: 0px 70px;
+}
+
+}
+
+
+@media screen and (max-width:650px) {
+    
+    #menu-icon{
+        display: block;
+        width: 50%;
+    }
+    
+    #menu-icon img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .menu{
+        position:absolute;
+        left:-10000px;
+        /* flex-basis: 100%; */
+        
+    }
+
+    #menu-icon:hover + .menu{
+        left: 0px;
+        right: 0px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: 100%;
+        align-items: center;
+        background-color: #FF8847;
+    }
+
+    .menu li{
+        position: relative;
+    }
+
+    .project-name, #viewall{
+        font-size: 1em;
+    }
+    
+    #skills-logo img{
+        max-width: 80px;
+        min-width: 60px;
+    }
+    
+    #skills-logo{
+        gap: 30px;
+    }
+
+}
+
+
+
+@media screen and (max-width:320px) {
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 2.25em;
+}
+
+#header{
+    padding: 8px 20px;
+    height: 44px;
+}
+
+#welcome, #about, #contact, #projects{
+    padding: 40px 20px;
+}
+
+.page-button{
+    border-width: 2px;
+    padding: 0.3em 0.6em;
+    font-size: 0.8em;
+}
+
+#site-logo img, #menu-icon{
+    width: 30px;
+}
+
+/* M - WELCOME */
+
+#welcome{
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "welcome-text"
+    "welcome-button"
+    "propic";
+    gap: 30px;
+}
+
+.page-button img{
+    display: none;
+}
+
+#hello, #title{
+    font-size: 1.25em;
+}
+
+#propic{
+    text-align: center;
+}
+
+#propic img{
+    max-width: 198px;
+}
+
+#hello, #title{
+    margin: 5px 0;
+}
+
+
+/* M - ABOUT */
+
+#about-me p{
+    font-size: 0.7em;
+}
+
+#skills-logo img{
+    max-width: 60px;
+    min-width: 20%;
+}
+
+/* M- PROJECTS */
+.project:nth-child(4){
+    display: none;
+}
+
+#project-img{   
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+} 
+
+
+
+#viewall img{
+    width: 40px;
+}
+
+/* M- FOOTER */
+#footer{
+    padding: 0px 20px;
+    font-size: 0.6em;
+    height: 44px;
+}
+
+#footer img{
+    width: 20px;
+}
+
+}
