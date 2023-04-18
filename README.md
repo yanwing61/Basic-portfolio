@@ -1,13 +1,13 @@
-#A Basic Portfolio
+# A Basic Portfolio
 
-Home Page
+Home Page includes:
 
-About Me
+- About Me
 
-Skills
+- Skills
 
-Projects
+- Projects
 
-Contact Form
+- Contact Form
 
 
